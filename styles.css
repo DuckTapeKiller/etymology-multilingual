@@ -1,0 +1,204 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+:root {
+	--etymol-sp: 1rem;
+}
+
+/* ── Centered bird icon at top of modals ── */
+
+.etymol-modal-icon {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 0.75rem;
+	color: var(--text-muted);
+}
+
+.etymol-modal-icon svg {
+	width: 32px;
+	height: 32px;
+}
+
+.modal.etymol-modal {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.etymol-modal .modal-content {
+	overflow-y: auto;
+	flex: 1;
+}
+
+/* ── Loading state ── */
+
+.etymol-loading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	gap: 1rem;
+}
+
+.etymol-spinner {
+	width: 24px;
+	height: 24px;
+	border: 3px solid var(--background-modifier-border);
+	border-top-color: var(--text-accent);
+	border-radius: 50%;
+	animation: etymol-spin 0.6s linear infinite;
+}
+
+@keyframes etymol-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.etymol-loading-text {
+	color: var(--text-muted);
+	font-size: 0.9rem;
+}
+
+/* ── Modal content ── */
+
+.etymol-modal-content {
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+/* ── Language prompt ── */
+
+.etymol-language-subtitle {
+	color: var(--text-muted);
+	font-size: 0.85rem;
+}
+
+.etymol-button-container {
+	display: flex;
+	gap: 12px;
+	margin-top: 1rem;
+}
+
+.etymol-lang-button {
+	flex: 1;
+}
+
+.etymol-keyboard-hint {
+	color: var(--text-faint);
+	font-size: 0.75rem;
+	margin-top: 0.75rem;
+}
+
+/* ── Info line ── */
+
+.etymol-info {
+	color: var(--text-muted);
+	font-style: italic;
+	font-size: 0.75rem;
+	padding: 0 var(--etymol-sp);
+}
+
+/* ── Entry list (English results) ── */
+
+.etymol-entries {
+	list-style-type: none;
+	margin-block-end: 0;
+	padding-inline-start: 0;
+	margin-top: 0.25rem;
+}
+
+.etymol-entries li {
+	padding: var(--etymol-sp);
+	margin-left: 0;
+}
+
+.etymol-entry {
+	transition: background-color 0.15s ease;
+	border-radius: 6px;
+}
+
+.etymol-entry:hover {
+	background-color: var(--background-secondary-alt);
+}
+
+.etymol-entry-title {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: var(--text-accent);
+	margin-bottom: 0.5rem;
+	margin-top: 0;
+}
+
+.etymol-entry-def {
+	margin-top: 0;
+	white-space: pre-wrap;
+}
+
+/* ── Word heading (Spanish/French) ── */
+
+.etymol-word-heading {
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+/* ── Source sections (Spanish/French) ── */
+
+.etymol-source-heading {
+	font-weight: bold;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+	padding-bottom: 0.25em;
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.etymol-source-text {
+	white-space: pre-wrap;
+	margin-bottom: 0.5em;
+}
+
+/* ── Action buttons (Copy / Insert / Save) ── */
+
+.etymol-actions {
+	display: flex;
+	gap: 8px;
+	margin-top: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.etymol-action-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 4px 10px;
+	font-size: 0.8rem;
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: var(--background-secondary);
+	color: var(--text-muted);
+	border: 1px solid var(--background-modifier-border);
+	transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.etymol-action-btn:hover {
+	background-color: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.etymol-action-btn svg {
+	flex-shrink: 0;
+}
+
+/* ── Error state ── */
+
+.etymol-error {
+	color: var(--text-error);
+	text-align: center;
+	padding: 2rem;
+}
