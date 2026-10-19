@@ -6,6 +6,8 @@
 
 ![Etymology Multilingual Art](https://github.com/user-attachments/assets/008aaa68-7574-475d-bf45-67277a94d044)
 
+<a href="https://community.obsidian.md/plugins/etymology-multilingual"><img alt="Get it on Obsidian" src="assets/get-it-on-obsidian.svg"></a>
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/ducktapekiller)
 
 This plugin allows you to look up the etymology of words in English, Spanish, and French directly within your Obsidian notes.
